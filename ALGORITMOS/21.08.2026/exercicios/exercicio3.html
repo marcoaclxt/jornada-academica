@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    Nome do aluno:
+    <input type="text" id="iptN1">
+<br><br>
+    Digite o valor da Ativ. Avaliativa 1:
+    <input type="text" id="ava1">
+<br><br>
+    Digite o valor da Ativ. Avaliativa 2:
+    <input type="text" id="ava2">
+<br><br>
+    Digite o valor da Ativ. Avaliativa 3:
+    <input type="text" id="ava3">
+<br><br>
+
+    <button onclick="calculaNota()">Mostrar Nota</button>
+
+    <div id="divMsg"></div>
+</body>
+
+<script>
+
+    function calculaNota() {
+        let n1 = iptN1.value;
+        let nAva1 = Number(ava1.value);
+        let nAva2 = Number(ava2.value);
+        let nAva3 = Number(ava3.value);
+
+        let soma = nAva1 + nAva2 + nAva3;
+
+        let media = (nAva1 + nAva2 + nAva3) / 3;
+
+        divMsg.innerHTML = `${n1}, a média das suas atividades é: ${media} `
+    }
+</script>
+</html>

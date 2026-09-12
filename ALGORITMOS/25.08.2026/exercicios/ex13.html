@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>13. Análise da c/c (Conta Corrente)</h2>
+
+    <span>Insira o valor de seu saldo na conta do banco:</span>
+    <input id="iptSaldo" type="text">
+
+    <span>Insira o valor do débito (ou seja, valor a tirar da conta):</span>
+    <input id="iptDebito" type="text">
+
+    <button onclick="verificar()">Analisar conta</button>
+
+    <div style="font-style: italic; color: blue;" id="divRes"></div>
+    <div style="color: red; font-weight: bold;" id="divResNegativo"></div>
+
+
+<script>
+
+function verificar() {
+    let saldo = Number(iptSaldo.value)
+    let debito = Number(iptDebito.value)
+
+    saldo = saldo - debito
+
+    if (saldo < 0) { 
+        divRes.innerHTML = ``
+        divResNegativo.innerHTML = `o saldo atual da conta corrente é ${saldo}`
+    }
+    if (saldo >= 0) {
+        divResNegativo.innerHTML = ``
+        divRes.innerHTML = `o saldo atual da conta corrente é ${saldo}`
+    }
+}
+
+</script>
+</body>
+</html>

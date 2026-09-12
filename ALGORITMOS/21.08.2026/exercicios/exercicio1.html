@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    Número 1:
+    <input type="text" id="iptN1">
+<br><br>
+    Número 2:
+    <input type="text" id="iptN2">
+<br><br>
+
+    <button onclick="calculaSoma()">soma</button>
+    <button onclick="calcularDiferenca()">diferença</button>
+    <button onclick="calcularProduto()">produto</button>
+    <button onclick="calcularRazao()">razão</button>
+
+    <div id="divMsg"></div>
+</body>
+
+<script>
+
+    function calculaSoma() {
+        let n1 = Number(iptN1.value);
+        let n2 = Number(iptN2.value);
+
+        let soma = n1 + n2;
+
+        divMsg.innerHTML = `A média entre ${n1} e ${n2} é ${soma}.`
+    }
+
+    function calcularDiferenca() {
+        let n1 = Number(iptN1.value);
+        let n2 = Number(iptN2.value);
+
+        let diferenca = n1 - n2;
+
+        divMsg.innerHTML = `A diferença entre ${n1} e ${n2} é ${diferenca}.`
+    }
+
+    function calcularProduto() {
+        let n1 = Number(iptN1.value);
+        let n2 = Number(iptN2.value);
+
+        let produto = n1 * n2;
+
+        divMsg.innerHTML = `A produto entre ${n1} e ${n2} é ${produto}.`
+    }
+
+    function calcularRazao() {
+        let n1 = Number(iptN1.value);
+        let n2 = Number(iptN2.value);
+
+        let razao = n1 / n2;
+
+        divMsg.innerHTML = `A razão entre ${n1} e ${n2} é ${razao}.`
+    }
+
+</script>
+</html>

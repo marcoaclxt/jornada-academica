@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span>Solicite a nota:</span>
+    <input id="iptNota" type="text">
+
+    <span>Insira a frequência do aluno:</span>
+    <input id="iptFreq" type="text">
+
+
+    <button onclick="verificar()">Analisar aluno</button>
+
+    <div id="divRes"></div>
+</body>
+
+</html>
+
+<script>
+
+    function verificar() {
+        let nota = iptNota.value
+        let frequencia = iptFreq.value
+
+        if (nota < 0 || nota > 10) {
+            alert("Onde já se viu nota <0 ou >10?!")
+            divRes.innerHTML = ""
+        } else if (frequencia < 0 || frequencia > 100) {
+            alert("Onde já se viu nota <0 ou >100?!")
+            divRes.innerHTML = ""
+        } else if (nota > 0 && nota < 6) {
+            divRes.innerHTML = `Aluno ficou abaixo da média<br>`
+        } else if (nota >= 6 && nota <= 8) {
+            divRes.innerHTML = `Aluno ficou na média<br>`
+        } else if (nota > 8 && nota <= 10) {
+            divRes.innerHTML = `Aluno acima da média<br>`
+        }
+
+        if(frequencia >= 75) {
+            divRes.innerHTML += `Aluno aprovado por frequência`
+        } else {
+            divRes.innerHTML += `Aluno reprovado por frequência`
+        }
+    }
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="iptAltura">Altura:</label>
+    <input id="iptAltura" type="text">
+
+    <button onclick="analisar()">Analisar</button>
+
+    <div id="divRes"></div>
+</body>
+</html>
+<script>
+
+    function analisar() {
+        let altura = Number(iptAltura.value)
+
+        if (altura <= 1.65) {
+            divRes.innerHTML = `Você pode ser piloto de corrida.`
+        } else if(altura <= 1.80) {
+            divRes.innerHTML = `Você pode ser jogador de futebol.`
+        } else {
+            divRes.innerHTML = `Você pode ser jogador de basquete ou vôlei`
+        }
+    }
+
+</script>

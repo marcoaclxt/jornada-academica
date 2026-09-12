@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceito 01</title>
+</head>
+<body>
+    Número 1:
+    <input type="text" id="iptN1">
+<br><br>
+    Número 2:
+    <input type="text" id="iptN2">
+<br><br>
+
+    <button onclick="calcularMedia()">Calcular Média</button>
+
+    <div id="divMsg"></div>
+</body>
+
+<script>
+
+    function calcularMedia() {
+        let n1 = Number(iptN1.value);
+        let n2 = Number(iptN2.value);
+
+        let media = (n1 + n2) / 2;
+
+        divMsg.innerHTML = `A média entre ${n1} e ${n2} é ${media}.`
+    
+    }
+
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>21. Análise de temperatura</h2>
+
+    <span>Insira a temperatura do ambiente:</span>
+    <input id="iptTemp" type="text">
+
+    <button onclick="verificar()">Verificar clima</button>
+
+    <div id="divRes"></div>
+
+<script>
+
+function verificar() {
+    let temp = Number(iptTemp.value)
+
+    if (temp < 10) {
+        divRes.innerHTML = `<img src="https://s2.glbimg.com/9j5W3Yvg7uJPUbC8_zrQ3vemCDM=/780x440/e.glbimg.com/og/ed/f/original/2015/12/03/mamao_podre_scot_nelson_creative_commons.jpg" />`
+    } else {
+        divRes.innerHTML = `<img src="https://imeb.com.br/wp-content/uploads/2017/11/TOP-6-melhores-alimentos-do-mundo-para-a-saude.png" />`
+    }
+}
+
+</script>
+</body>
+</html>

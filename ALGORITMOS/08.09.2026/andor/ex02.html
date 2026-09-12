@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Aprovação de Crédito Bancário</title>
+</head>
+
+<body>
+    <span>Insira sua renda mensal:</span>
+    <input id="iptRenda" type="text"> <br>
+
+    <span>Insira seu score de crédito:</span>
+    <input id="iptScore" type="text"><br>
+
+    <span>Insira há quantos anos é correntista:</span>
+    <input id="iptCorren" type="text"><br>
+
+    <span>Possui dividas em aberto?</span>
+    <select id="iptDividas">
+        <option value="0">Não</option>
+        <option value="1">Sim</option>
+    </select>
+
+    
+    <button onclick="verificar()">Verificar bolsa</button>
+
+    <div id="divRes"></div>
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+        let renda = iptRenda.value
+        let score = iptScore.value
+        let correntista = iptCorren.value
+        let dividas = iptDividas.value
+
+        if(renda >= 3000 && score >= 600 || correntista > 5 && dividas == 0) {
+            alert("Empréstimo aprovado")
+        } else {
+            alert("Empréstimo negado")
+        }
+    }
+
+</script>

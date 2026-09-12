@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Aposentadoria: Quanto Falta?</title>
+</head>
+<body>
+    <h2>1. Aposentadoria: Quanto Falta?</h2>
+
+    Insira a idade do usuário:
+    <input type="text" id="idade">
+    <br>
+
+    <br>
+
+    <button onclick="calcularHomem()">Aposentadoria Homem</button>
+    <button onclick="calcularMulher()">Aposentadoria Mulher</button>
+
+    <div id="divRe"></div>
+</body>
+
+<script>
+
+function calcularHomem() {
+    divRe.innerHTML = `O tempo que falta para você aposentar é: ${70 - idade.value}`
+}
+
+function calcularMulher() {
+    divRe.innerHTML = `O tempo que falta para você aposentar é: ${60 - idade.value}`
+}
+
+</script>
+</html>

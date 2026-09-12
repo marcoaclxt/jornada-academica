@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1. Permissão para festa</h2>
+
+    <p>Insira sua idade:</p>
+
+    <input id="iptIdade" type="text">
+
+    <button onclick="verificarIdade()">Ir pra festa</button>
+
+    <div id="divRes"></div>
+</body>
+
+<script>
+
+ function verificarIdade() {
+    if(iptIdade.value < 18) {
+        divRes.innerHTML = `Pedir permissão pro responsável <br>`
+    }
+
+    divRes.innerHTML += `#partiuFesta`
+ }
+
+</script>
+</html>

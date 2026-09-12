@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>09.  Controle de horas assistindo streaming</h2>
+
+    <p>Insira a ultima serie que você assistiu:</p>
+
+    <input id="iptSerie" type="text">
+
+    <p>insira a quantidade de episodios que você assistiu:</p>
+
+    <input id="iptEpisodios" type="text">
+
+    <button onclick="calcular()">Verificar nível</button>
+
+    <div id="divRes"></div>    
+</body>
+
+<script>
+
+function calcular() {
+    let valorSerie = iptSerie.value
+    let valorEpisodios = Number(iptEpisodios.value)
+
+    let calculo = (valorEpisodios * 22) / 60;
+
+    if(calculo >= 30) {
+        divRes.innerHTML += `Vejo que você gosta da série ${valorSerie} <br>`
+        divRes.innerHTML += `Uau, você realmente gosta dessa série! <br><br>`
+    } else {
+        divRes.innerHTML += `Vejo que você gosta da série ${calculo} <br>`
+    }
+
+}
+
+</script>
+</html>

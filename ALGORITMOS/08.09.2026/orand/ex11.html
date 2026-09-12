@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span>Escolha o tipo de passageiro:</span>
+    <select id="selTipoPas">
+        <option value="#" selected disabled>Selecione o tipo de passageiro</option>
+        <option value="0">Comum</option>
+        <option value="1">Estudante</option>
+        <option value="2">Idoso/PNE</option>
+    </select>
+
+    <span>Escolha o tipo de passagem:</span>
+    <select id="selTipoPass">
+        <option value="#" selected disabled>Selecione o tipo de passageiro</option>
+        <option value="0">Passagem única</option>
+        <option value="1">Passagem integração </option>
+    </select>
+
+    
+    <button onclick="verificar()">Simular preço</button>
+
+    <div id="divRes"></div>
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+        let tipoPassageiro = selTipoPas.value
+        let tipoPassagem = selTipoPass.value
+
+        let precoPassagemUnica = 5.50
+        let precoPassagemIntegracao = 5.90
+
+        let descontoEstudante = 0.5
+        let descontoIdoso = 0
+
+        if(tipoPassageiro == 0 && tipoPassagem == 0) {
+            divRes.innerHTML = `Valor da passagem escolhida: R$${precoPassagemUnica}`
+        } else if(tipoPassageiro == 0 && tipoPassagem == 1) {
+            divRes.innerHTML = `Valor da passagem escolhida: R$${precoPassagemIntegracao}`
+        } else if(tipoPassageiro == 1 && tipoPassagem == 0) {
+            divRes.innerHTML = `Valor da passagem escolhida: R$${precoPassagemUnica * descontoEstudante}`
+        } else if(tipoPassageiro == 1 && tipoPassagem == 1) {
+            divRes.innerHTML = `Valor da passagem escolhida: R$${precoPassagemIntegracao * descontoEstudante}`
+        } else if(tipoPassageiro == 2 && tipoPassagem == 0) {
+            divRes.innerHTML = `Valor da passagem escolhida: R$${precoPassagemUnica * descontoIdoso}`
+        } else if(tipoPassageiro == 2 && tipoPassagem == 1) {
+            divRes.innerHTML = `Valor da passagem escolhida: R$${precoPassagemIntegracao * descontoIdoso}`
+        }
+    }
+
+</script>

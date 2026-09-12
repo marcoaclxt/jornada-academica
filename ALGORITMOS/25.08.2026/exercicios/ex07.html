@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>7. Cheque especial</h2>
+
+    <p>Insira o saldo da conta :</p>
+
+    <input id="iptSaldo" type="text">
+
+    <p>Solicite o valor do débito (ou seja, valor a tirar da conta):</p>
+
+    <input id="iptDebito" type="text">
+
+    <button onclick="calcular()">Analisar conta</button>
+
+    <div id="divRes"></div>    
+</body>
+
+<script>
+
+function calcular() {
+    let valorSaldo = Number(iptSaldo.value)
+    let valorDebito = Number(iptDebito.value)
+
+    let calculo = valorSaldo - valorDebito;
+
+    if(calculo <= 0) {
+        divRes.innerHTML += `O saldo atual da conta corrente é ${calculo} <br>`
+        divRes.innerHTML += `ENTROU NO CHEQUE ESPECIAL! <br><br>`
+    } else {
+        divRes.innerHTML += `O saldo atual da conta corrente é ${calculo}`
+    }
+
+}
+
+</script>
+</html>

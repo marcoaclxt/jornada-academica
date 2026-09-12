@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8. Sistema de Cinema</title>
+</head>
+<body>
+    <h2>8. Sistema de Cinema</h2>
+
+    Insira o nome do seu filme:
+    <input type="text" id="nomeFilme">
+
+    Insira o horário:
+    <input type="text" id="horario">
+
+    <button onclick="identificar()">Identificar PET</button>
+</body>
+</html>
+
+<script>
+
+function identificar() {
+    alert(`Ingresso confirmado para o filme ${nomeFilme.value} no horario ${horario.value}`)
+}
+
+</script>

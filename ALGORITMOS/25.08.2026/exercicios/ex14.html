@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>14. Análise da média de notas</h2>
+
+    <span>Insira as duas notas do aluno:</span>
+    <input id="iptNota1" type="text">
+    <input id="iptNota2" type="text">
+
+    <button onclick="verificar()">Verificar Situação</button>
+
+    <div id="divRes"></div>
+
+
+<script>
+
+function verificar() {
+    let nota1 = Number(iptNota1.value)
+    let nota2 = Number(iptNota2.value)
+
+    let media = (nota1 + nota2) / 2 
+
+    if (media >= 6) { 
+        divRes.innerHTMl = `Parabéns, aprovado `
+    }
+    if (media < 6) {
+        divRes.innerHTMl =  `Tente outra vez...`
+    }
+}
+
+</script>
+</body>
+</html>

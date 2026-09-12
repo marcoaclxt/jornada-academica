@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    Insira a quantidade de votos do candidato A:
+    <input type="text" id="votosA">
+    <br><br>
+
+    Insira a quantidade de votos do candidato B:
+    <input type="text" id="votosB">
+
+    <br><br>
+
+    Insira a quantidade de votos nulos:
+    <input type="text" id="votosNulos">
+
+    <br><br>
+
+    Insira a quantidade de votos brancos:
+    <input type="text" id="votosBrancos">
+
+    <button onclick="calculaVotos()">Mostrar Nota</button>
+
+    <div id="divMsg"></div>
+</body>
+
+<script>
+
+    function calculaVotos() {
+        let votosCandA = Number(votosA.value)
+        let votosCandB = Number(votosB.value)
+        let votosCandNulos = Number(votosNulos.value)
+        let votosCandBrancos = Number(votosBrancos.value)
+
+        let calculoTotal = votosCandA + votosCandB + votosCandBrancos + votosCandNulos 
+
+        let calculoCandA = calculoTotal * 0.40
+
+        let calculoCandB = calculoTotal * 0.35
+
+        let calculoInva = calculoTotal * 0.25
+
+        divMsg.innerHTML = `    
+        Total de votos: ${calculoTotal}
+
+        Candidato A: 40% (${calculoCandA} votos)  
+
+        Candidato B: 35% (${calculoCandB} votos)  
+
+        Inválidos: 25% (${calculoInva} votos)  `
+    }
+
+</script>
+</html>

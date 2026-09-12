@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>3. Controle de notas</h2>
+
+    <p>Insira quantas latinhas toma por dia:</p>
+
+    <input id="iptNota1" type="text">
+    <input id="iptNota2" type="text">
+    <input id="iptNota3" type="text">
+
+    <button onclick="calcularNota()">Analisar desempenho</button>
+
+    <div id="divRes"></div>    
+</body>
+
+<script>
+
+function calcularNota() {
+    let nota1 = Number(iptNota1.value)
+    let nota2 = Number(iptNota2.value)
+    let nota3 = Number(iptNota3.value)
+
+    let calculo = (nota1 + nota2 + nota3) / 3;
+
+    if(calculo >= 9.4) {
+        divRes.innerHTML = `Sua média foi de ${calculo} `
+        divRes.innerHTML += `Parabéns, você é fora de série!"`
+    } else {
+        divRes.innerHTML = `Sua média foi de ${calculo} `
+    }
+
+}
+
+</script>
+</html>

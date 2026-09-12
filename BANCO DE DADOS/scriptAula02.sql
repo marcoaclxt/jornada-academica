@@ -1,0 +1,110 @@
+USE sprint1;
+
+-- Usar nomes padrão snake_case ( dessa forma ) ou o camelCase.alter
+-- Não usar caracteres especiais e acentuação.
+
+CREATE TABLE aluno (
+ra CHAR(8) PRIMARY KEY,
+nome VARCHAR(40) NOT NULL, -- TEXTO VARIAVEL que é OBRIGATÒRIO.
+email VARCHAR(50) UNIQUE, -- ESTE DADO NÂO PODE REPETIR
+dtNasc DATE -- FORMATO ISO: AAAA-MM-dd
+);
+
+DESCRIBE aluno; -- MOSTRA OS METADADOS DA TABELA (TIPOS DE DADOS E ETC).
+SHOW TABLES; -- MOSTRA AS TABELAS QUE TEMOS NO NOSSO BANCO DE DADOS.
+
+INSERT INTO aluno (ra, nome, email, dtNasc) VALUES 
+(01262135, 'José', 'marco.alves@sptech.school', '2007-10-26');
+
+INSERT INTO aluno VALUES
+(01262136, 'José', 'josé.barreto@sptech.school', '2007-05-14');
+
+SELECT * from aluno;
+
+
+-- INSERINDO TODOS OS DADOS OBRIGATÒRIOS.
+INSERT INTO aluno (ra, nome) VALUES
+(01262562, 'Victor'),
+(01262563, 'Leonardo'),
+(01262898, 'Yasmin');
+
+SELECT * from aluno;
+
+
+-- NÂO ALTERA OS DADOS ORIGIANIS.
+SELECT
+IFNULL(email, 'Email não registrado.'), 
+IFNULL(dtNasc, 'Sem data de nascimento.') 
+nome 
+FROM aluno;
+
+
+-- TENTATIVA DE INSERIR APENAS UM DOS DADOS OBRIGATORIOS
+INSERT INTO aluno (ra) VALUE (01262489); -- vai dar erro
+
+
+-- EXIBIR DADOS DE UM ALUNO
+SELECT * FROM aluno WHERE ra = '1262563';
+
+
+-- ATUALIZAR OS DADOS DO ALUNO DE RA 01262135
+UPDATE aluno SET nome = 'Marco'
+WHERE ra = '1262135';
+
+UPDATE aluno SET email = 'victor.torres@sptech.school'
+WHERE ra = '1262562';
+
+
+-- ALTERAR A ESTRUTURA DA TABELA ADD COLUNA NOTA NA TABELA ALUNO.
+ALTER TABLE aluno ADD COLUMN nota DECIMAL(3,2);
+
+DESCRIBE aluno;
+
+UPDATE aluno SET nota = 9.99
+WHERE ra = '1262135';
+
+
+-- ALTERAR A ESTRUTURA DA TABELA, RENOMEAR UMA COLUNA NA TABELA JA EXISTENTE.
+ALTER TABLE aluno RENAME COLUMN dtNasc TO dataNascimento;
+
+
+-- ALTERAR A ESTRUTURA DA TABELA, MODIFICAR O TIPO DA COLUNA NA TABELA.
+ALTER TABLE aluno MODIFY COLUMN dataNascimento DATETIME;
+
+
+-- ALTERAR O NOME DA TABELA.
+ALTER TABLE aluno RENAME TO alunoAds;
+
+
+-- REMOVENDO UMA COLUNA DA TABELA alunoAds.
+ALTER TABLE alunoAds DROP COLUMN nota;
+
+
+-- ALTERANDO A TABELA - ADD A COLUNA ATIVO
+ALTER TABLE alunoAds ADD COLUMN ativo TINYINT; -- TIPO BOOLEANO MP BD 0 = FALSO e 1 = VERDADEIRO
+
+
+-- ATUALIZAR O CAMPO ATIVO PARA TODOS OS REGISTROS.
+UPDATE alunoAds SET ativo = 1; -- Sem safemode.
+UPDATE alunoAds SET ativo = 1 WHERE ra LIKE '1262%'; -- Com safemode.
+
+SELECT * FROM alunoAds;
+
+
+-- CRIANDO UMA COLUNA DE GENERO.
+ALTER TABLE alunoAds ADD COLUMN genero CHAR(1);
+
+-- CRIANDO RESTRIÇÃO NO CAMPO GENERO.
+ALTER TABLE alunoAds ADD CONSTRAINT chGenero 
+CHECK(genero = 'm' OR genero = 'f' OR genero = 'o');
+
+UPDATE alunoAds SET genero = 'm'
+WHERE ra = '1262135';
+
+
+-- EXCLUIR UM REGISTRO DA TABELA.
+DELETE FROM alunoAds WHERE ra = '1262898';
+
+
+-- DELETAR TODOS OS REGISTROS.
+TRUNCATE TABLE alunoAds;

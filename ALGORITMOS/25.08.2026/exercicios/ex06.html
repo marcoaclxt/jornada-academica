@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>6. Financiamento da Casa própria</h2>
+
+    <p>Insira o valor da renda familiar:</p>
+
+    <input id="iptRenda" type="text">
+
+    <p>Insira o valor da prestação:</p>
+
+    <input id="iptPresta" type="text">
+
+    <button onclick="calcular()">Verificar financiamento</button>
+
+    <div id="divRes"></div>    
+</body>
+
+<script>
+
+function calcular() {
+    let valorRenda = Number(iptRenda.value)
+    let valorPresta = Number(iptPresta.value)
+
+    let calculo = ((valorPresta / valorRenda) * 100).toFixed(2);
+
+    if(calculo >= 30) {
+        divRes.innerHTML += `A prestação corresponde a ${calculo}% da renda familiar <br>`
+        divRes.innerHTML += `Será necessário complementar a renda familiar <br>`
+    } else {
+        divRes.innerHTML = `A prestação corresponde a ${calculo}% da renda familiar`
+    }
+
+}
+
+</script>
+</html>

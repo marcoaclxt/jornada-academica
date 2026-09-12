@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9. Acesso à Academia 24 Horas</title>
+</head>
+
+<body>
+
+    <span>Concluiu o curso básico?</span>
+    <select id="iptCurso">
+        <option value="0">Não</option>
+        <option value="1">Sim</option>
+    </select> <br>
+
+    <span>Insira a média do aluno:</span>
+    <input id="iptMedia" type="text"><br>
+
+    <span>Insira a nota do aluno no teste de nivelamento:</span>
+    <input id="iptNotaNivel" type="text"><br>
+
+    <span>Documentação do aluno está completa?</span>
+    <select id="iptDocum">
+        <option value="0">Não</option>
+        <option value="1">Sim</option>
+    </select><br>
+
+    <button onclick="verificar()">Verificar matrícula</button>
+
+    <div id="divRes"></div>
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+        let cursoBasico = iptCurso.value
+        let media = iptMedia.value
+        let notaNivel = iptNotaNivel.value
+        let documentacao = iptDocum.value
+
+        if( documentacao == 1 && (cursoBasico == 1 && media >= 7 || notaNivel >= 8)) {
+            alert("Matrícula liberada para o curso avançado")
+        } else {
+            alert("Matrícula não liberada")
+        }
+    }
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="receber100()" id="receber100">Receber 100</button>
+    <button onclick="pagar50()" id="pagar50">Pagar 50</button>
+
+    <div id="divRes"></div>
+</body>
+
+<script>
+    let saldo = 0
+
+    function receber100 () {
+        saldo = saldo + 100
+
+        divRes.innerHTML += `<br>Transferência de R$100 recebida! Saldo atual: R$${saldo}`;
+    }
+
+    
+    function pagar50 () {
+        saldo = saldo - 50  
+
+        divRes.innerHTML += `<br>Pagamento de R$50 efetuado! Saldo atual: R$${saldo}`;
+    }
+
+</script>
+</html>

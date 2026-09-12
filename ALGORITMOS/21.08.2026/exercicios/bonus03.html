@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o valor recebido com a venda de peças:
+    <input id="valorRe" type="text">
+    <br><br>
+    
+    Digite o valor recebido com a venda de serviços:
+    <input id="valorSer" type="text">
+    <br><br>
+    
+    Digite o percentual de imposto sobre os valores recebidos:
+    <input id="perImpo" type="text">
+    <br><br>
+    
+    Digite o valor dos gastos realizados no mês:
+    <input id="valorGast" type="text">
+    <br><br><br>
+    <button onclick="calcularTudo()" id="deposito">Acumular</button>
+
+    <div id="divRes"></div>
+</body>
+
+<script>
+
+    let contador = 1;
+    let acumulado = 0;
+
+    function calcularTudo() {
+
+        let valorRecebido = Number(valorRe.value)
+        let valorServicos = Number(valorSer.value)
+        let percImposto = Number(perImpo.value)
+        let valorGasto = Number(valorGast.value)
+
+
+        let totalRecebido = valorRecebido + valorServicos
+        let valorImposto = totalRecebido * (percImposto / 100)
+        let saldoFinal = totalRecebido - valorGasto - valorImposto
+        acumulado = acumulado + saldoFinal
+
+
+        divRes.innerHTML += `
+            Resumo do mês ${contador} <br><br>
+            Total recebido = R$${totalRecebido} <br><br>
+            Valor do Imposto = R$${valorImposto} <br><br>
+            Saldo Final de R$${saldoFinal} <br><br>
+            Acumulado até o Momento = R$${acumulado}
+            <br><br><br><br>
+        `
+
+        contador++
+    }
+
+</script>
+</html>

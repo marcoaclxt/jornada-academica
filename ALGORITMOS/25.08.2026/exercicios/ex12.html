@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>12. Verificação das finanças</h2>
+
+    <span>Insira o valor de seu saldo na conta do banco :</span>
+    <input id="iptSaldo" type="text">
+
+    <button onclick="verificar()">Verificar finanças</button>
+
+    <div id="divRes"></div>
+
+
+<script>
+
+function verificar() {
+    let saldo = Number(iptSaldo.value)
+
+    if(saldo == 0) {
+        divRes.innerHTML = `Conta zerada`
+    }
+    if (saldo < 0) {
+        divRes.innerHTML = `Está devendo!`
+    }
+    if (saldo > 0) {
+        divRes.innerHTML = `Saldo positivo! sorriso`
+    }
+}
+
+</script>
+</body>
+</html>

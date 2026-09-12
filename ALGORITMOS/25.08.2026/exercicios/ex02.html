@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>2. Controle de Refrigerante</h2>
+
+    <p>Insira quantas latinhas toma por dia:</p>
+
+    <input id="iptQtdLatinhas" type="text">
+
+    <button onclick="verificarRefri()">Quantos refris?</button>
+
+    <div id="divRes"></div>    
+</body>
+
+<script>
+
+function verificarRefri() {
+    let qtdLatinhas = Number(iptQtdLatinhas.value)
+
+    let calculo = qtdLatinhas * 365
+
+    if(calculo >= 500) {
+        divRes.innerHTML = `Você consome ${calculo} refris por ano. `
+        divRes.innerHTML += `Cuidado com a diabetes!`
+    } else {
+        divRes.innerHTML = `Você consome ${calculo} refris por ano. `
+    }
+
+}
+
+</script>
+</html>

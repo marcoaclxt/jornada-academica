@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>11. Análise CNH</h2>
+
+    <span>Insira o nome do aluno:</span>
+    <input id="iptNome" type="text">
+
+    <span>Insira a idade do aluno:</span>
+    <input id="iptIdade" type="text">
+
+    <div id="divRes"></div>
+
+    <button onclick="verificar()">Avaliar Aluno</button>
+
+<script>
+
+function verificar() {
+    let nomeAluno = iptNome.value
+    let idadeAluno = Number(iptIdade.value)
+
+    if (idadeAluno >= 18) {
+        divRes.innerHTML = `${iptNome.value}, vamos tirar a CNH?`
+    } else {
+        divRes.innerHTML = `${iptNome.value}, vai jogar playstation`
+    }
+}
+
+</script>
+</body>
+</html>

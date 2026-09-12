@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>17. Teste de divisibilidade</h2>
+
+    <span>Insira um número:</span>
+    <input id="iptNum" type="text">
+
+    <span>Insira outro número:</span>
+    <input id="iptNum2" type="text">
+
+    <button onclick="verificar()">Testar</button>
+
+    <div id="divRes"></div>
+
+<script>
+
+function verificar() {
+    let numero1 = Number(iptNum.value)
+    let numero2 = Number(iptNum2.value)
+
+    let numeroCalc = numero1 % numero2
+
+    if (numeroCalc == 0) {
+        divRes.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaLv3AmOb42z1vLjpxibLjFuHqCenMCqEhgAyjOG2CJw&s=10" />`;
+    }
+    if (numeroCalc != 0) {
+        divRes.innerHTML = `<img src="https://thumbs.dreamstime.com/b/gesto-negativo-24739352.jpg" />`;
+    }
+}
+
+</script>
+</body>
+</html>

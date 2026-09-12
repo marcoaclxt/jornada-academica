@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Promoção Relâmpago da Loja</title>
+</head>
+
+<body>
+    <span>Insira a quantidade de itens comprados:</span>
+    <input id="iptItens" type="text"> <br>
+
+    <span>Insira o valor total da compra:</span>
+    <input id="iptValor" type="text"> <br>
+    
+    <span>É cliente do programa de fidelidade?</span>
+    <select id="iptFidelidade">
+        <option value="0">Não</option>
+        <option value="1">Sim</option>
+    </select><br>
+
+    <span>Insira o cupom de desconto:</span>
+    <input id="iptCupom" type="text"> <br>
+
+    <button onclick="verificar()">Aplicar desconto</button>
+
+    <div id="divRes"></div>
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+        let qtdItens = iptItens.value
+        let valor = iptValor.value
+        let fidelidade = iptFidelidade.value
+        let cupom = iptCupom.value
+
+        if(qtdItens >= 3 && (fidelidade == 1 || cupom == "PROMO10") && valor >= 50) {
+            alert("Desconto aplicado!")
+        } else {
+            alert("Compra não elegível para desconto")
+        }
+    }
+
+</script>

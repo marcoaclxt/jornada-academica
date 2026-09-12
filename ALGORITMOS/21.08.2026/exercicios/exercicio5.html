@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    Quantas horas você dormiu:
+    <input type="text" id="iptN1">
+<br><br>
+
+    <button onclick="calculaSono()">Mostrar Nota</button>
+
+    <div id="divMsg"></div>
+</body>
+
+<script>
+
+    function calculaSono() {
+        let n1 = iptN1.value;
+
+        let a = n1 * 0.05
+
+        let b = n1 * 0.45
+
+        let c = n1 * 0.3
+
+        let d = n1 * 0.2
+
+        divMsg.innerHTML = 
+        `Ao dormir ${n1} horas, você dormiu:  
+
+        ${a} horas na fase 1 <br><br>
+
+        ${b} horas na fase 2 <br><br>
+
+        ${c} horas na fase 3 <br><br>
+
+        ${d} horas na fase REM `
+    }
+</script>
+</html>

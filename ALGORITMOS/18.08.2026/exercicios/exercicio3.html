@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Economia com o Bilhete Único</title>
+</head>
+<body>
+    <h2>3. Economia com o Bilhete Único</h2>
+
+    Insira o valor da passagem:
+    <input type="text" id="valorPassagem">
+    <br>
+    <br>
+
+    Insira quantas viagens fará por mês:
+    <input type="text" id="viagens">
+    <br>
+
+
+    <button onclick="calcularPassagem()">Ver economia</button>
+
+    <div id="divRe"></div>
+</body>
+
+<script>
+
+function calcularPassagem() {
+    divRe.innerHTML = `Você economizará R$${(valorPassagem.value / 2) * viagens.value} por mês`
+}
+
+</script>
+</html>

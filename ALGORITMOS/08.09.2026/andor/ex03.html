@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Bolsa de Estudos Integral</title>
+</head>
+
+<body>
+    <span>Insira sua renda familiar per capita:</span>
+    <input id="iptRenda" type="text"> <br>
+
+    <span>Insira sua média escolar:</span>
+    <input id="iptMedia" type="text"><br>
+
+    <span>É atleta federado?</span>
+    <select id="iptAtleta">
+        <option value="0">Não</option>
+        <option value="1">Sim</option>
+    </select>
+
+    
+    <button onclick="verificar()">Verificar bolsa</button>
+
+    <div id="divRes"></div>
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+        let renda = iptRenda.value
+        let media = iptMedia.value
+        let federado = iptAtleta.value
+
+        if(renda <= 800 && media >= 8 || federado == 1 && media >= 8) {
+            alert("Bolsa integral concedida!")
+        } else {
+            alert("Bolsa não concedida")
+        }
+    }
+
+</script>

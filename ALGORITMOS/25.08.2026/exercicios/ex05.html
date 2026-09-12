@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>6. Financiamento da Casa própria</h2>
+
+    <p>Insira a quantidade de KWh consumida no mês:</p>
+
+    <input id="iptQtdKW" type="text">
+
+    <button onclick="calcular()">Calcular conta de luz</button>
+
+    <div id="divRes"></div>    
+</body>
+
+<script>
+
+function calcular() {
+    let valorKW = Number(iptQtdKW.value)
+
+    let calculo = valorKW * 0.85;
+
+    if(valorKW <= 100) {
+        divRes.innerHTML = `Você vai pagar R$${(valorKW * 0.85) - 0.10} de energia nesse mês. `
+    } else {
+        divRes.innerHTML = `Você vai pagar R$${calculo} de energia nesse mês.`
+    }
+
+}
+
+</script>
+</html>

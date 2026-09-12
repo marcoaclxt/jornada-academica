@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Insira a nota do ENEM do aluno:</span>
+    <input id="iptNotaENEM" type="text">
+
+    <span>Insira a nota do vestibular interno do aluno:</span>
+    <input id="iptNotaVest" type="text">
+
+    <button onclick="verificar()" >Avaliação</button>
+</body>
+</html>
+<script>
+
+    function verificar() {
+        let notaENEM = Number(iptNotaENEM.value)
+        let notaVest = Number(iptNotaVest.value)
+
+        if(iptNotaENEM >= 800 || notaVest >= 700) {
+            alert("Parabéns! Aprovado")
+        } else {
+            alert("Tente semestre que vem!")
+        }
+    }
+
+</script>

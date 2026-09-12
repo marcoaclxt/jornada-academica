@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="input_num">Número:</label>
+    <input id="input_num" type="text">
+    <button onclick="verificar()">Verificar</button>
+
+    <div id="divMsg"></div>
+</body>
+
+</html>
+
+<script>
+
+    function verificar() {
+        let num = Number(input_num.value)
+
+        if (num < 0) {
+            divMsg.innerHTML = `O número ${num} é negativo.`
+        } else {
+            if (num >= 0) {
+                if (num <= 100) {
+                    divMsg.innerHTML = `O número ${num} esta entre 0 e 100.`
+                }
+
+                if (num > 100) {
+                    divMsg.innerHTML = `O número ${num} é maior que 100.`
+                }
+            }
+        }
+
+    }
+
+</script>

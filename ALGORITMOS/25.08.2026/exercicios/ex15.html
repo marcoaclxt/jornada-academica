@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>15. Controle de peso no elevador - v2</h2>
+
+    <span>Insira a quantidade de homens no elevador:</span>
+    <input id="iptQtdH" type="text">
+
+    <span>Insira a quantidade de mulheres no elevador:</span>
+    <input id="iptQtdM" type="text">
+
+    <button onclick="verificar()">Ligar Elevador</button>
+
+    <span style="color: green;" id="sucessoDiv"></span>
+    <span style="color: red;" id="pararDiv"></span>
+<script>
+
+function verificar() {
+    let qtdEleH = Number(iptQtdH.value)
+    let qtdEleM = Number(iptQtdM.value)
+
+    let pesoEle = (qtdEleH) * 90 + (qtdEleM * 70)
+
+    let qtdPerder = 
+
+    if (pesoEle <= 500) {
+        sucessoDiv.innerHTML = `Elevador vai se mover, pois está com ${pesoEle}kg`;
+    }
+    if (pesoEle > 500) {
+        pararDiv.innerHTML = `Alguém precisa descer. Precisa perder Xkg para mover o elevador `;
+    }
+}
+
+</script>
+</body>
+</html>

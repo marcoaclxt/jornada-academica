@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="iptRenda">Insira sua renda familiar mensal:</label>
+    <input id="iptRenda" type="text">
+
+    <button onclick="analisar()">Analisar Renda</button>
+
+    <div id="divRes"></div>
+</body>
+</html>
+<script>
+
+    function analisar() {
+        let renda = Number(iptRenda.value)
+
+
+        if (renda >= 9500) {
+            divRes.innerHTML = `Classe A<br>`
+        } else {
+            divRes.innerHTML = `Classe B<br>`
+        }
+        
+        if (renda >=2500) {
+            divRes.innerHTML = `Classe C<br>`
+        }
+    }
+
+</script>

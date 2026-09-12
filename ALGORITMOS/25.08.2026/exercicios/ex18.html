@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>18. Mercado BOM DOCE</h2>
+
+    <span>Insira a quantidade de chocolates comprados:</span>
+    <input id="iptQtd" type="text">
+
+    <button onclick="verificar()">Comprar</button>
+
+    <div id="divRes"></div>
+
+<script>
+
+function verificar() {
+    let qtdChoco = Number(iptQtd.value)
+
+    if(qtdChoco >= 12) {
+        let calculo = 3 * qtdChoco
+        divRes.innerHTML = `o valor da sua compra foi de ${calculo}`
+    } else {
+        let calculo = 2.50 * qtdChoco
+        divRes.innerHTML = `o valor da sua compra foi de ${calculo}`
+    }
+}
+
+</script>
+</body>
+</html>

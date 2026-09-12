@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>20. Análise de frequência do aluno</h2>
+
+    <span>Insira a frequencia do aluno:</span>
+    <input id="iptFreq" type="text">
+
+    <button onclick="verificar()">Analisar frequência</button>
+
+    <div id="divRes"></div>
+
+<script>
+
+function verificar() {
+    let frequencia = Number(iptFreq.value)
+
+    if (frequencia < 50) {
+        divRes.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQjAXBiTUtOI1zgYBTNxuWv36acaFNAWwN8yvmrU0W2A&s=10" />`
+    } else {
+        divRes.innerHTML = `<img src="https://i.pinimg.com/736x/87/2c/50/872c503ecf7265ff5d1cb2e0dc448813.jpg" />`
+    }
+}
+
+</script>
+</body>
+</html>

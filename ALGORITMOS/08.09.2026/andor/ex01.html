@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Processo Seletivo: Vestibular ou ENEM?</title>
+</head>
+
+<body>
+    <span>Insira sua nota do vestibular interno:</span>
+    <input id="iptVestibular" type="text"> <br>
+
+    <span>Insira sua nota do ENEM do candidato:</span>
+    <input id="iptEnem" type="text"><br>
+
+    <span>Insira sua nota da redação do candidato:</span>
+    <input id="iptReda" type="text"><br>
+
+    
+    <button onclick="verificar()">Verificar aprovação</button>
+
+    <div id="divRes"></div>
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+        let vestibular = iptVestibular.value
+        let enem = iptEnem.value
+        let redacao = iptReda.value
+
+        if(vestibular >= 700 || enem >= 650 && redacao > 0) {
+            alert("Aprovado")
+        } else {
+            alert("Não aprovado")
+        }
+    }
+
+</script>

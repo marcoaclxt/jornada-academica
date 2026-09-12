@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>4.  Rola a pizza?</h2>
+
+    <p>Insira o valor da pizza:</p>
+
+    <input id="iptValorPizza" type="text">
+    
+    <p>Insira a quantidade de amigos reunidos:</p>
+    <input id="iptQtdAmigos" type="text">
+
+    <button onclick="calcularPizza()">Rola a pizza?</button>
+
+    <div id="divRes"></div>    
+</body>
+
+<script>
+
+function calcularPizza() {
+    let valorPizza = Number(iptValorPizza.value)
+    let qtdAmigos = Number(iptQtdAmigos.value)
+
+    let calculo = valorPizza / qtdAmigos;
+
+    if(calculo >= 20) {
+        divRes.innerHTML = `Cada amigo vai pagar R$${calculo} pela pizza `
+        divRes.innerHTML += `Deu ruim! Pizza muito cara!"`
+    } else {
+        divRes.innerHTML = `Cada amigo vai pagar R$${calculo} pela pizza `
+    }
+
+}
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span>Insira a temperatura:</span>
+    <input id="iptTemp" type="text">
+
+    <span>Insira a umidade:</span>
+    <input id="iptUmid" type="text">
+
+    
+    <button onclick="verificar()">Avaliar clima</button>
+
+    <div id="divRes"></div>
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+        let temperatura = iptTemp.value
+        let umidade = iptUmid.value
+
+        if(umidade < 0 || umidade > 100) {
+            alert("Valor de umidade inválido")
+            divRes.innerHTML = ""
+        } else if(temperatura >= 23 && temperatura <= 24 && umidade < 60) {
+            divRes.innerHTML = `Clima agradável`
+        } else {
+            divRes.innerHTML = `Clima desconfortável`
+        }
+    }
+
+</script>

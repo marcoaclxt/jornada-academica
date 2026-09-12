@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h2>Minha calculadora preferida</h2>
+
+    Entre com o primeiro número:
+    <input type="text" id="num1">
+    <br><br>
+
+
+    Entre com o segundo número:
+    <input type="text" id="num2">
+    <br><br>
+
+
+    <button onclick="multiplicar()">Multiplicação</button>
+    <button onclick="divisao()">Divisão</button>
+    <button onclick="subt()">Subtração</button>
+    <button onclick="somar()">Adição</button>
+    <button onclick="resto()">Resto</button>
+
+    <div id="divRes"></div>
+</body>
+
+<script>
+
+function multiplicar() {
+    divRes.innerHTML = `A multiplicação de ${num1.value} por ${num2.value} é: ${num1.value * num2.value}`
+}
+
+function divisao() {
+    divRes.innerHTML = `A divisão de ${num1.value} por ${num2.value} é: ${(num1.value / num2.value).toFixed(2)}`
+}
+
+function subt() {
+    divRes.innerHTML = `A subtração de ${num1.value} por ${num2.value} é: ${num1.value - num2.value}`
+}
+
+function somar() {
+    divRes.innerHTML = `A adição de ${num1.value} por ${num2.value} é: ${Number(num1.value) + Number(num2.value)}`
+}
+
+function resto() {
+    divRes.innerHTML = `O resto da divisão de ${num1.value} por ${num2.value} é: ${Number(num1.value) % Number(num2.value)}`
+}
+
+</script>
+</html>

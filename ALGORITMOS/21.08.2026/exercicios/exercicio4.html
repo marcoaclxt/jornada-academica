@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    Nome do aluno:
+    <input type="text" id="iptN1">
+<br><br>
+    Digite o valor da continuada:
+    <input type="text" id="ava1">
+<br><br>
+    Digite o valor da semestral:
+    <input type="text" id="ava2">
+<br><br>
+
+    <button onclick="calculaNota()">Mostrar Nota</button>
+
+    <div id="divMsg"></div>
+</body>
+
+<script>
+
+    function calculaNota() {
+        let n1 = iptN1.value;
+        let nAva1 = Number(ava1.value);
+        let nAva2 = Number(ava2.value);
+
+        let media = ((nAva1 * 0.40) + (nAva2 * 0.60)) / 2;
+
+        divMsg.innerHTML = `A média de ${n1} será de ${media}`
+    }
+</script>
+</html>

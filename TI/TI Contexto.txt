@@ -1,0 +1,13 @@
+Contexto - Torneiras em casa vivem abertas, a conta de água vem alta e os gatos precisam tomar água.
+
+Objetivo - Instalar torneiras inteligentes, com sensores e válvula solenoide. Que vão controlar a quantidade e quando a água vai sair.
+
+Justificativa - Evitar o desperdício de água, diminuir a conta de água e garantir que os gatos possam beber água quando quiserem.
+
+---
+
+Houve uma época em que tive dois gatos em casa, que por criação, só tomavam água na torneira. O dia todo, precisávamos abrir e fechar a torneira para que eles pudessem se hidratar, muitas dessas vezes de madrugada precisávamos abrir a torneira e voltávamos a dormir, fazendo com que ela ficasse a madrugada inteira aberta, aumentando o valor da conta de água e a desperdiçando. Isso acontecia não só de madrugada, mas em todos os horários do dia. Esse problema não ocorre somente com os meus gatos, mas também por descuidos humanos de deixar a torneira ligada.
+
+Para evitar isso, desenhei um mini projeto para instalação de torneiras inteligentes em todas as pias da minha casa, elas vão ter sensores para detectar a presença dos gatos, válvula solenoide e um temporizador, que fechará a corrente de água caso o tempo aberto ultrapasse 30 segundos e não haja nenhuma detecção no sensor.
+
+Com essa solução, seria possível evitar o desperdício de água, diminuir o valor da conta e ao mesmo tempo garantir que os gatos possam se hidratar quando quiserem. E além disso, os moradores da minha casa não iriam mais precisar se preocupar em acordar na madrugada pensando se deixaram a torneira aberta ou não.

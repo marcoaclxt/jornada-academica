@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4. Acesso à Área VIP do Evento</title>
+</head>
+
+<body>
+    <span>Insira sua idade:</span>
+    <input id="iptIdade" type="text"> <br>
+
+    <span>Possui ingresso VIP?</span>
+    <select id="iptIngresso">
+        <option value="0">Não</option>
+        <option value="1">Sim</option>
+    </select>
+
+    <span>Possui convite especial?</span>
+    <select id="iptConvite">
+        <option value="0">Não</option>
+        <option value="1">Sim</option>
+    </select>
+
+    <button onclick="verificar()">Liberar acesso</button>
+
+    <div id="divRes"></div>
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+        let idade = iptIdade.value
+        let ingresso = iptIngresso.value
+        let convite = iptConvite.value
+
+        if(idade >= 18 && (ingresso == 1 || convite == 1)) {
+            alert("Acesso liberado à área VIP")
+        } else {
+            alert("Acesso negado")
+        }
+    }
+
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Economia com o Bilhete Único</title>
+</head>
+<body>
+    <h2>3. Economia com o Bilhete Único</h2>
+
+    Insira o "ki base" (força base) do guerreiro Saiyajin;:
+    <input type="text" id="kiValue">
+    <br>
+    <br>
+
+    Transformar em...
+    <br>
+
+
+    <button onclick="calcularSSJ()">SSJ</button>
+    <button onclick="calcularSSJ2()">SSJ2</button>
+    <button onclick="calcularSSJ3()">SSJ3</button>
+
+    <div id="divRe"></div>
+</body> 
+
+<script>
+
+function calcularSSJ() {
+    divRe.innerHTML = `Após se transformar em ${kiValue.value}, o ki desse Saiyajin passa a ser de ${kiValue.value * 50}`
+}
+
+function calcularSSJ2() {
+    divRe.innerHTML = `Após se transformar em ${kiValue.value}, o ki desse Saiyajin passa a ser de ${kiValue.value * 100}`
+}
+
+function calcularSSJ3() {
+    divRe.innerHTML = `Após se transformar em ${kiValue.value}, o ki desse Saiyajin passa a ser de ${kiValue.value * 200}`
+}
+
+</script>
+</html>

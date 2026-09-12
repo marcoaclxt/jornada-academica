@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    Insira o valor da pizza:
+    <input type="text" id="valorPizza">
+    <br><br>
+
+    Insira o sabor da pizza:
+    <input type="text" id="saborPizza">
+    <br><br>
+
+    Insira a quantidade de amigos:
+    <input type="text" id="amigosPizza">
+
+    <button onclick="calculaVotos()">Mostrar Nota</button>
+
+    <div id="divMsg"></div>
+</body>
+
+<script>
+
+    function calculaVotos() {
+        let valorDaPizza = Number(valorPizza.value)
+        let amigosDaPizza = Number(amigosPizza.value)
+        let saborDaPizza = Number(saborPizza.value)
+        
+
+        let calculoPizzas = (valorPizza / amigosDaPizza) * 0.1
+
+        divMsg.innerHTML = `Cada amigo vai colaborar com R$${calculoPizzas} para a pizza de ${saborDaPizza}.`  
+    }
+
+
+</script>
+</html>
